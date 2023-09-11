@@ -3,7 +3,7 @@
  * 9/9/2023
  * CSC 1061 - Computer Science II - Java
  */ 
-package a03;
+package assignment03;
 
 import java.util.ArrayList;
 import java.util.Random;

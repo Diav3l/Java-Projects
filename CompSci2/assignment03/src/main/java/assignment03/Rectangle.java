@@ -4,7 +4,7 @@
  * CSC 1061 - Computer Science II - Java
  * @apiNote no edits done on my part I only coppied the code for the assignment
  */ 
-package a03;
+package assignment03;
 
 /**
  * Code for Class.
