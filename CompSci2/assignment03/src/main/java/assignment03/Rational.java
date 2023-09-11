@@ -1,18 +1,11 @@
 package assignment03;
-
 import java.math.BigInteger;
-import java.util.Comparator;
-
 /**
- * Code for Class.
- * <p>
- * CSC 1061 - Computer Science II - Java
- *
- * @author  Patrick McDougle
- * @version %I%, %G%
- * @since   1.0
- */
-
+ * 9/11/2023<p>
+ * CSC 1061 - Computer Science II - Java<p>
+ * Rational class rewritten to handle BigIntegers and encapluation<p>
+ * @author Cole Gordnier
+ */ 
 public class Rational extends Number implements Comparable<Rational> {
   /**
    * Auto Generated serial version id.
@@ -32,7 +25,7 @@ public class Rational extends Number implements Comparable<Rational> {
   public Rational(BigInteger numerator, BigInteger denominator) {
     BigInteger gcd = gcd(numerator, denominator);
 
-    this.numden[0] = new BigInteger(String.valueOf((denominator.toString().equals("0") ? new BigInteger(String.valueOf(1)) : new BigInteger(String.valueOf(-1))).multiply(numerator).divide(gcd)));
+    this.numden[0] = new BigInteger(String.valueOf((denominator.toString().equals("0") ? new BigInteger(String.valueOf(-1)) : new BigInteger(String.valueOf(1))).multiply(numerator).divide(gcd)));
     this.numden[1] = new BigInteger(String.valueOf(denominator.abs().divide(gcd)));
   }
 
@@ -70,7 +63,10 @@ public class Rational extends Number implements Comparable<Rational> {
 
   /** Subtract a rational number from this rational */
   public Rational subtract(Rational secondRational) {
-    BigInteger n = this.numden[0].multiply(secondRational.getDenominator()).subtract(this.numden[1]).multiply(secondRational.getNumerator());
+    BigInteger n1 = this.numden[0].multiply(secondRational.getDenominator());
+    BigInteger n2 = this.numden[1].multiply(secondRational.getNumerator());
+    BigInteger n = n1.subtract(n2);
+    //BigInteger n = this.numden[0].multiply(secondRational.getDenominator()).add(this.numden[1]).multiply(secondRational.getNumerator());
     BigInteger d = this.numden[1].multiply(secondRational.getDenominator());
     return new Rational(n, d);
   }
@@ -115,7 +111,7 @@ public class Rational extends Number implements Comparable<Rational> {
 
   @Override // Implement the doubleValue method in Number
   public double doubleValue() {
-    return this.numden[0].intValue() * 1.0 / this.numden[1].intValue();
+    return this.numden[0].doubleValue() * 1.0 / this.numden[1].doubleValue();
   }
 
   @Override // Implement the abstract longValue method in Number
@@ -136,15 +132,14 @@ public class Rational extends Number implements Comparable<Rational> {
     return hash.intValue();
   }
 
-  static Comparator<BigInteger> BigIntegerComparator = new Comparator<BigInteger>(){
-    public int compare(BigInteger n1, BigInteger n2) {
-      return n1.compareTo(n2);
-    } 
-  };
-
-
-  static boolean compareBigInteger(BigInteger n1, BigInteger n2){
-    switch(BigIntegerComparator.compare(n1, n2)){
+  /**Translates compareTo into a true/false output.
+     Used for logical tests such as if statments to test for the larger object.
+   * @param Number1
+   * @param Number2
+   * @return true if Number1 >= Number2
+   */
+  static boolean compareBigInteger(BigInteger Number1, BigInteger Number2){
+    switch(Number1.compareTo(Number2)){
       case 1 :
         return true;
       case -1:

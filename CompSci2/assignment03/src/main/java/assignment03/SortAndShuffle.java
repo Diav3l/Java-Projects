@@ -24,14 +24,13 @@ public interface SortAndShuffle{
     /**
      * There are a number of ways to sort an ArrayList<Number>
        First thing to note is that the class Number does not have a comparator
-       There are two ways (that I currently know of) to fix this issue. 
+       There are two ways (that I currently know of) to fix this issue.<p> 
      * 1) is the following line of code
        list.sort(Comparator.comparing(comp -> new BigDecimal(String.valueOf(comp))));
        Code from https://stackoverflow.com/questions/77073987/how-to-sort-an-arraylist-of-type-number
-       This defines a comparator within the sort.
-     * 
-     * 2) is the method that I implemented here, where I defined a comparitor then referenced it within the sort method.
-     */
+       This defines a comparator within the sort.<p>
+     */ 
+     //2) is the method that I implemented here, where I defined a comparitor then referenced it within the sort method.
     public static void sort(ArrayList<Number> list){
         Collections.sort(list, NumberComparator);
     }
