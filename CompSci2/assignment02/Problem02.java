@@ -10,7 +10,7 @@ import java.util.ArrayList;
 
 class RepeatAdditionQuiz {
     static ArrayList<Long> answers = new ArrayList<Long>();
-    public static void main(String[] args) {//tmp
+    public static void main(String[] args) {
         Random random = new Random();
         
 

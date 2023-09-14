@@ -6,7 +6,7 @@ package CompSci2.assignment02;
 import java.util.Scanner;
 
 class userInput{
-  public static void main(String[] args){//tmp
+  public static void main(String[] args){
     double s1,s2,s3;
     String color;
     boolean filled = true;

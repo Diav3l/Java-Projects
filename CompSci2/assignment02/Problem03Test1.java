@@ -6,7 +6,7 @@ package CompSci2.assignment02;
 import java.util.Scanner;
 
 public class Problem03Test1 {
-    public static void main(String[] args){//tmp
+    public static void main(String[] args){
         Problem03part1 B2S = new Problem03part1();
         Scanner in = new Scanner(System.in);
 

@@ -5,7 +5,7 @@
 package CompSci2.assignment02;
 class Problem03part1 {
 
-    void bin2Dec(String binaryString) throws NumberFormatException{//tmp
+    void bin2Dec(String binaryString) throws NumberFormatException{
         try {
             System.out.println(Integer.parseInt(binaryString,2));
         } catch (Exception NumberFormatException) {

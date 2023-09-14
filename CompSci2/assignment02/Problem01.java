@@ -3,7 +3,7 @@
  * Triangle element for geometricObject
  */
 package CompSci2.assignment02;
-class Triangle extends GeometricObject{//tmp
+class Triangle extends GeometricObject{
     private double side1,side2,side3;
     Triangle(){
         side1=1;
