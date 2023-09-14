@@ -3,7 +3,7 @@
  * 9/10/2023
  * CSC 1061 - Computer Science II - Java
  */ 
-package assignment03;
+package assignment03.problem02;
 import java.util.Date;
 
 /**

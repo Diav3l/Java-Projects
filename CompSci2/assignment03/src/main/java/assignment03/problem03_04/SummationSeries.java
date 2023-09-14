@@ -1,4 +1,4 @@
-package assignment03;
+package assignment03.problem03_04;
 import java.math.BigInteger;
 /**
  * 9/11/2023<p>

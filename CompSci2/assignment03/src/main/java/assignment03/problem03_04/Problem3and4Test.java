@@ -1,4 +1,4 @@
-package assignment03;
+package assignment03.problem03_04;
 import java.util.Scanner;
 import java.math.BigInteger;
 

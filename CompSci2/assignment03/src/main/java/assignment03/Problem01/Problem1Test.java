@@ -3,7 +3,7 @@
  * 9/9/2023
  * CSC 1061 - Computer Science II - Java
  */ 
-package assignment03;
+package assignment03.Problem01;
 
 import java.util.ArrayList;
 import java.util.Random;
@@ -16,7 +16,7 @@ class testproblem1{
 
         //fills TestList with incredibly BigIntegers and BigDecimals
         while(TestList.size()<10){
-            TestList.add(Math.pow(R.nextGaussian(),100 ));
+            TestList.add(R.nextInt(1000000));
         }
 
         System.out.println("Initial list");
