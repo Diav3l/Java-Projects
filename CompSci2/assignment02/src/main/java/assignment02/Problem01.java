@@ -2,7 +2,7 @@
  * 9/6/2023
  * Triangle element for geometricObject
  */
-package CompSci2.assignment02;
+package assignment02;
 class Triangle extends GeometricObject{
     private double side1,side2,side3;
     Triangle(){

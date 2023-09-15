@@ -3,7 +3,7 @@
  * Randomly generates 2 numbers and quizes the user on the answer.
  * Prints out if and the number of times an answer was given
  */
-package CompSci2.assignment02;
+package assignment02;
 import java.util.Random;
 import java.util.Scanner;
 import java.util.ArrayList;

@@ -2,7 +2,7 @@
  * 9/6/2023
  * Converts a binary string to an integer in decimal form throws a NumberFormatException if not given binary string
  */
-package CompSci2.assignment02;
+package assignment02;
 class Problem03part1 {
 
     void bin2Dec(String binaryString) throws NumberFormatException{

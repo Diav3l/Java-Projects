@@ -2,7 +2,7 @@
  * 9/6/2023
  * Test code for Triangle object uses user input
  */
-package CompSci2.assignment02;
+package assignment02;
 import java.util.Scanner;
 
 class userInput{
